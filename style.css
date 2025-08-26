@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+:root {
+    --bg-color: #121212;
+    --card-bg: #1e1e1e;
+    --text-color: #e0e0e0;
+    --accent-color: #7289da;
+    --shadow-color: rgba(0, 0, 0, 0.4);
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+a {
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #5b6eae;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* --- Header & Navigation --- */
+header {
+    background: rgba(30, 30, 30, 0.8);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #333;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--text-color);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+/* --- Hero Section --- */
+.hero {
+    text-align: center;
+    padding: 8rem 2rem;
+    background: linear-gradient(135deg, #1e1e1e, #121212);
+    border-bottom: 1px solid #333;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    margin: 0 0 1rem;
+    background: linear-gradient(45deg, var(--accent-color), #8d72da);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto 2rem;
+    color: #a0a0a0;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.75rem 2rem;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+}
+
+.btn-primary {
+    background-color: var(--accent-color);
+    color: white;
+    box-shadow: 0 4px 15px rgba(114, 137, 218, 0.4);
+}
+
+.btn-primary:hover {
+    background-color: #5b6eae;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(114, 137, 218, 0.6);
+}
+
+/* --- Dashboard Sections --- */
+.dashboard-features {
+    padding-top: 4rem;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.feature-card {
+    background-color: var(--card-bg);
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px var(--shadow-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(114, 137, 218, 0.2);
+}
+
+.feature-card h3 {
+    font-size: 1.5rem;
+    margin-top: 0;
+    color: var(--accent-color);
+}
+
+.feature-card p {
+    font-size: 1rem;
+    color: #a0a0a0;
+}
+
+/* --- Policy Pages --- */
+.policy-page {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.policy-page h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: var(--text-color);
+}
+
+.policy-page p {
+    font-size: 1rem;
+    color: #e0e0e0;
+}
+
+.policy-page ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.policy-page ul li {
+    background: var(--card-bg);
+    padding: 1rem;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 15px var(--shadow-color);
+}
+
+/* --- Footer --- */
+footer {
+    text-align: center;
+    padding: 2rem;
+    border-top: 1px solid #333;
+    margin-top: 4rem;
+    color: #888;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
