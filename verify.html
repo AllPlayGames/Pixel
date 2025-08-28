@@ -1,12 +1,33 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>verifacation and catpcha</title>
-  </head>
-  <body>
-    <head>
+<head>
+  <title>reCAPCTHA</title>
   <script src="https://www.google.com/recaptcha/enterprise.js?render=6LcBZLUrAAAAAJketOM4BU_CFIfHTC4xn_xcusqD"></script>
 </head>
-  </body>
+<body>
+
+  <h1>reCAPTCHA Demo</h1>
+
+  <form action="/login" method="POST">
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username"><br><br>
+    
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password"><br><br>
+    
+    <button type="submit" onclick="onClick(event)">Login</button>
+  </form>
+
+  <script>
+    function onClick(e) {
+      e.preventDefault();
+      grecaptcha.enterprise.ready(async () => {
+        const token = await grecaptcha.enterprise.execute('6LcBZLUrAAAAAJketOM4BU_CFIfHTC4xn_xcusqD', {action: '
+          
+        console.log('reCAPTCHA token:', token);
+      });
+    }
+  </script>
+
+</body>
 </html>
